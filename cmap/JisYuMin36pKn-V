@@ -1,0 +1,134 @@
+%!PS-Adobe-3.0 Resource-CMap
+%%DocumentNeededResources: ProcSet (CIDInit)
+%%DocumentNeededResources: CMap (JisYuMin36pKn-H)
+%%IncludeResource: ProcSet (CIDInit)
+%%IncludeResource: CMap (JisYuMin36pKn-H)
+%%BeginResource: CMap (JisYuMin36pKn-V)
+%%Title: (JisYuMin36pKn-V Adobe Identity 0)
+%%Version: 1.000
+%%EndComments
+
+% NOTICE:
+% It is intended that this file is used only with dvipdfmx.
+
+/CIDInit /ProcSet findresource begin
+
+12 dict begin
+
+begincmap
+
+/JisYuMin36pKn-H usecmap
+
+/CIDSystemInfo 3 dict dup begin
+  /Registry (Adobe) def
+  /Ordering (Identity) def
+  /Supplement 0 def
+end def
+
+/CMapName /JisYuMin36pKn-V def
+/CMapVersion 1.000 def
+/CMapType 1 def
+
+/XUID [1 10 25340] def
+
+/WMode 1 def
+
+89 begincidchar
+<2122> 7887
+<2123> 7888
+<212b> 50206
+<212c> 50205
+<2131> 7889
+<2132> 7890
+<213c> 50177
+<213d> 7892
+<213e> 7893
+<2141> 7894
+<2142> 7895
+<2143> 7896
+<2144> 7897
+<2145> 7898
+<214a> 7899
+<214b> 7900
+<214c> 7901
+<214d> 7902
+<214e> 7903
+<214f> 7904
+<2150> 7905
+<2151> 7906
+<2152> 7907
+<2153> 7908
+<2154> 7909
+<2155> 7910
+<2156> 7911
+<2157> 7912
+<2158> 7913
+<2159> 7914
+<215a> 7915
+<215b> 7916
+<2161> 7917
+<222a> 736
+<222b> 737
+<222c> 738
+<222d> 739
+<2421> 50178
+<2423> 50179
+<2425> 50180
+<2427> 50181
+<2429> 50182
+<2443> 50183
+<2463> 50184
+<2465> 50185
+<2467> 50186
+<246e> 50187
+<2521> 50188
+<2523> 50189
+<2525> 50190
+<2527> 50191
+<2529> 50192
+<2543> 50193
+<2563> 50194
+<2565> 50195
+<2567> 50196
+<256e> 50197
+<2575> 50198
+<2576> 50199
+<2821> 7479
+<2822> 7481
+<2823> 7491
+<2824> 7495
+<2825> 7503
+<2826> 7499
+<2827> 7507
+<2828> 7523
+<2829> 7515
+<282a> 7531
+<282c> 7480
+<282d> 7482
+<282e> 7494
+<282f> 7498
+<2830> 7506
+<2831> 7502
+<2832> 7514
+<2833> 7530
+<2834> 7522
+<2835> 7538
+<2837> 7511
+<2838> 7526
+<2839> 7519
+<283a> 7534
+<283b> 7542
+<283c> 7508
+<283d> 7527
+<283e> 7516
+<283f> 7535
+<2840> 7545
+endcidchar
+
+endcmap
+CMapName currentdict /CMap defineresource pop
+end
+end
+
+%%EndResource
+%%EOF

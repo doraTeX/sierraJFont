@@ -1,0 +1,53 @@
+\NeedsTeXFormat{pLaTeX2e}
+\ProvidesPackage{addJFont}[2016/12/06 v0.1 doraTeX]
+
+\newif\ifaddJFont@uplatex \addJFont@uplatexfalse
+
+\DeclareOption{uplatex}{\addJFont@uplatextrue}
+\ProcessOptions\relax
+
+\ifaddJFont@uplatex
+  \def\addJFont@scale{0.924690}%%% scale for upjisr-h.tfm
+  \def\addJFontEnc{2}
+\else
+  \def\addJFont@scale{0.961000}%%% scale for jis.tfm
+  \def\addJFontEnc{1}
+\fi
+
+\@onlypreamble\addJFont@special
+\let\addJFont@special\@empty
+
+\@onlypreamble\addJFont
+
+%%% \addJFont{<family>}{<series>}{<pTeX用CMap>}{<upTeX用CMap1>}{<upTeX用CMap2>}{<dvipdfmx用フォント名>}
+\def\addJFont#1#2#3#4#5#6{%
+  \g@addto@macro\addJFont@special{%
+    \ifaddJFont@uplatex
+      \special{pdf:mapline r-#1-#2-jy2  #4H #6}%
+      \special{pdf:mapline r-#1-#2-jy2x #5H #6}%
+      \special{pdf:mapline r-#1-#2-jt2  #4V #6}%
+    \else
+      \special{pdf:mapline r-#1-#2-jy1  #3H #6}%
+      \special{pdf:mapline r-#1-#2-jt1  #3V #6}%
+    \fi
+  }%
+  %
+  \expandafter\ifx\csname JY\addJFontEnc+#1\endcsname\relax
+    \DeclareFontFamily{JY\addJFontEnc}{#1}{}%
+    \DeclareFontFamily{JT\addJFontEnc}{#1}{}%
+  \fi
+  %
+  \DeclareFontShape{JY\addJFontEnc}{#1}{#2}{n}{<->s*[\addJFont@scale]#1-#2-jy\addJFontEnc}{}%
+  \DeclareFontShape{JY\addJFontEnc}{#1}{#2}{it}{<->ssub*#1/#2/n}{}%
+  \DeclareFontShape{JY\addJFontEnc}{#1}{#2}{sl}{<->ssub*#1/#2/n}{}%
+  \DeclareFontShape{JY\addJFontEnc}{#1}{#2}{sc}{<->ssub*#1/#2/n}{}%
+  %
+  \DeclareFontShape{JT\addJFontEnc}{#1}{#2}{n}{<->s*[\addJFont@scale]#1-#2-jt\addJFontEnc}{}%
+  \DeclareFontShape{JT\addJFontEnc}{#1}{#2}{it}{<->ssub*#1/#2/n}{}%
+  \DeclareFontShape{JT\addJFontEnc}{#1}{#2}{sl}{<->ssub*#1/#2/n}{}%
+  \DeclareFontShape{JT\addJFontEnc}{#1}{#2}{sc}{<->ssub*#1/#2/n}{}%
+}
+
+\AtBeginDocument{\AtBeginDvi{\addJFont@special}}
+
+\endinput
