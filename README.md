@@ -67,4 +67,4 @@ pLaTeX / upLaTeX + dvipdfmx で和文フォントを自由に使えるように�
 
 # その他詳細
 
-TeX & LaTeX Advent Calendar 2016 の[6日目の記事]()を参照してください。
+TeX & LaTeX Advent Calendar 2016 の[6日目の記事](http://doratex.hatenablog.jp/entry/20161206/1480950097)を参照してください。
