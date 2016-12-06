@@ -3,7 +3,7 @@
 pLaTeX / upLaTeX + dvipdfmx で和文フォントを自由に使えるようにするためのパッケージです。
 
 * addJFont パッケージ：任意の和文フォントを追加します。
-* SierraJFont パッケージ：macOS Sierra 搭載の和文フォントを全て使えるようにします。
+* SierraJFont パッケージ：addJFont パッケージを用いて，macOS Sierra 搭載の和文フォントを全て使えるようにします。
 
 # インストール
 
@@ -14,9 +14,32 @@ pLaTeX / upLaTeX + dvipdfmx で和文フォントを自由に使えるように�
 * `tfm` → `TEXMFLOCAL/fonts/tfm/SierraJFont`
 * `vf` → `TEXMFLOCAL/fonts/vf/SierraJFont`
 
-`src` 内は tfm/vf を生成するために用いたスクリプトです。使用時には不要です。
+`src` 内は tfm/vf を生成するために用いたスクリプトです。使用時には不要なので，インストールは必要ありません。
 
 # 使用法
+
+## addJFont パッケージ
+
+```tex
+\usepackage{addJFont}
+```
+
+としておけば，
+
+```tex
+\addJFont{<family>}{<series>}{<pTeX用CMap>}{<upTeX用CMap1>}{<upTeX用CMap2>}{<dvipdfmx用フォント名>}
+```
+
+の構文で和文フォントが追加できます。
+
+### 使用例
+
+```tex
+\addJFont{klee}{m}{2004-}{UniJIS2004-UTF16-}{UniJIS-UCS2-}{:1:Klee.ttc}
+```
+
+
+## sierraJFont パッケージ
 
 ```tex
 \usepackage{sierraJFont}
@@ -63,7 +86,7 @@ pLaTeX / upLaTeX + dvipdfmx で和文フォントを自由に使えるように�
 
 # サンプル
 
-同梱の `sample.tex` をご覧ください。
+同梱の `sample.tex`（upLaTeX用サンプル）をご覧ください。
 
 # その他詳細
 
