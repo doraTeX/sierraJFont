@@ -1,0 +1,67 @@
+%#!platex
+\documentclass[a3paper]{jsarticle}
+\usepackage{HighSierraJFont}
+\usepackage{plext}% 縦組用
+\usepackage[margin=2cm,noheadfoot]{geometry}
+\pagestyle{empty}
+
+\def\test#1#2#3{{\HighSierraJFont{#1}{#2}\makebox[23zw][l]{#3}あいうー１２３、「葛祇辻鷗」。☃}\par}
+
+\def\testAll{%
+\test{hiraginoSans}{w0}{ヒラギノ角ゴシック　Ｗ０}
+\test{hiraginoSans}{w1}{ヒラギノ角ゴシック　Ｗ１}
+\test{hiraginoSans}{w2}{ヒラギノ角ゴシック　Ｗ２}
+\test{hiraginoSans}{w3}{ヒラギノ角ゴシック　Ｗ３}
+\test{hiraginoSans}{w4}{ヒラギノ角ゴシック　Ｗ４}
+\test{hiraginoSans}{w5}{ヒラギノ角ゴシック　Ｗ５}
+\test{hiraginoSans}{w6}{ヒラギノ角ゴシック　Ｗ６}
+\test{hiraginoSans}{w7}{ヒラギノ角ゴシック　Ｗ７}
+\test{hiraginoSans}{w8}{ヒラギノ角ゴシック　Ｗ８}
+\test{hiraginoSans}{w9}{ヒラギノ角ゴシック　Ｗ９}
+\test{hiraginoSerif}{w3}{ヒラギノ明朝　ＰｒｏＮ　Ｗ３}
+\test{hiraginoSerif}{w6}{ヒラギノ明朝　ＰｒｏＮ　Ｗ６}
+\test{hiraginoSansR}{w4}{ヒラギノ丸ゴ　ＰｒｏＮ　Ｗ４}
+
+\test{yuMin}{m}{游明朝体　ミディアム}
+\test{yuMin}{db}{游明朝体　デミボールド}
+\test{yuMin}{eb}{游明朝体　エクストラボールド}
+\test{yuMin36pKn}{m}{游明朝体＋３６ポかな　ミディアム}
+\test{yuMin36pKn}{db}{游明朝体＋３６ポかな　デミボールド}
+\test{yuMin36pKn}{eb}{游明朝体＋３６ポかな　エクストラボールド}
+
+\test{yuGo}{m}{游ゴシック体　ミディアム}
+\test{yuGo}{b}{游ゴシック体　ボールド}
+
+\test{yuKyokasho}{m}{游教科書体　ミディアム}
+\test{yuKyokasho}{b}{游教科書体　ボールド}
+
+\ifydir
+\test{yuKyokashoYoko}{m}{游教科書体　横用　ミディアム}
+\test{yuKyokashoYoko}{b}{游教科書体　横用　ボールド}
+\fi
+
+\test{toppanBunkyuMincho}{r}{凸版文久明朝　レギュラー}
+\test{toppanBunkyuGothic}{r}{凸版文久ゴシック　レギュラー}
+\test{toppanBunkyuGothic}{db}{凸版文久ゴシック　デミボールド}
+\test{toppanBunkyuMidashiMincho}{eb}{凸版文久見出し明朝　エクストラボールド}
+\test{toppanBunkyuMidashiGothic}{eb}{凸版文久見出しゴシック　エクストラボールド}
+
+\test{klee}{m}{クレー　ミディアム}
+\test{klee}{db}{クレー　デミボールド}
+
+\test{tsukuARdGothic}{r}{筑紫Ａ丸ゴシック　レギュラー}
+\test{tsukuARdGothic}{b}{筑紫Ａ丸ゴシック　ボールド}
+\test{tsukuBRdGothic}{r}{筑紫Ｂ丸ゴシック　レギュラー}
+\test{tsukuBRdGothic}{b}{筑紫Ｂ丸ゴシック　ボールド}
+}
+
+\begin{document}
+\setlength\parindent{0pt}
+
+\testAll
+
+\vspace{1cm}
+
+\parbox<t>{39zw}{\testAll}
+
+\end{document}
