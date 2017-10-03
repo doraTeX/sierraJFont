@@ -1,9 +1,16 @@
 \NeedsTeXFormat{pLaTeX2e}
 \ProvidesPackage{addJFont}[2016/12/06 v0.1 doraTeX]
+\RequirePackage{keyval}
 
 \newif\ifaddJFont@uplatex \addJFont@uplatexfalse
 
 \DeclareOption{uplatex}{\addJFont@uplatextrue}
+
+\DeclareOption*{\addJFont@setkey}
+\def\addJFont@setkey{\expandafter\addJFont@setkey@x\expandafter{\CurrentOption}}
+\def\addJFont@setkey@x{\setkeys{addJFont}}
+
+\define@key{addJFont}{scale}{\def\addJFont@given@scale{#1}}
 \ProcessOptions\relax
 
 \ifaddJFont@uplatex
@@ -13,6 +20,10 @@
   \def\addJFont@scale{0.961000}%%% scale for jis.tfm
   \def\addJFontEnc{1}
 \fi
+\@ifundefined{addJFont@given@scale}{}{%
+  \edef\addJFont@scale{\addJFont@given@scale}%
+}
+
 
 \@onlypreamble\addJFont@special
 \let\addJFont@special\@empty
