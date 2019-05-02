@@ -3,10 +3,10 @@
 function generateTFM() {
 	FAMILY=$1
 	SERIES=$2
-	perl pxcopyfont.pl -o jis ${FAMILY}-${SERIES}-jy1 r-${FAMILY}-${SERIES}-jy1
-	perl pxcopyfont.pl -o jis-v ${FAMILY}-${SERIES}-jt1 r-${FAMILY}-${SERIES}-jt1
-	perl pxcopyfont.pl -o upjisr-h ${FAMILY}-${SERIES}-jy2 r-${FAMILY}-${SERIES}-jy2 r-${FAMILY}-${SERIES}-jy2x
-	perl pxcopyfont.pl -o upjisr-v ${FAMILY}-${SERIES}-jt2 r-${FAMILY}-${SERIES}-jt2
+	jfmutil vfcopy jis ${FAMILY}-${SERIES}-jy1 r-${FAMILY}-${SERIES}-jy1
+	jfmutil vfcopy jis-v ${FAMILY}-${SERIES}-jt1 r-${FAMILY}-${SERIES}-jt1
+	jfmutil vfcopy upjisr-h ${FAMILY}-${SERIES}-jy2 r-${FAMILY}-${SERIES}-jy2 r-${FAMILY}-${SERIES}-jy2x
+	jfmutil vfcopy upjisr-v ${FAMILY}-${SERIES}-jt2 r-${FAMILY}-${SERIES}-jt2
 }
 
 generateTFM hiraginoSans w0
