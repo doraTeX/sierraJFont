@@ -4,7 +4,7 @@ pLaTeX / upLaTeX + dvipdfmx で和文フォントを自由に使えるように�
 
 * addJFont パッケージ：任意の和文フォントを追加します。
 * SierraJFont パッケージ：addJFont パッケージを用いて，macOS 10.12 Sierra 搭載の和文フォントを全て使えるようにします。
-* HighSierraJFont パッケージ：addJFont パッケージを用いて，macOS 10.13 HighSierra 搭載の和文フォントを全て使えるようにします。
+* HighSierraJFont パッケージ：addJFont パッケージを用いて，macOS 10.13 HighSierra 搭載の和文フォントを全て使えるようにします。macOS 10.14 Mojave でもそのまま使えます。
 
 # インストール
 
@@ -85,13 +85,13 @@ pLaTeX / upLaTeX + dvipdfmx で和文フォントを自由に使えるように�
 * `\SierraJFont{tsukuBRdGothic}{r}`：筑紫B丸ゴシック レギュラー
 * `\SierraJFont{tsukuBRdGothic}{b}`：筑紫B丸ゴシック ボールド
 
-## SierraJFont パッケージ
+## HighSierraJFont パッケージ
 
 ```tex
 \usepackage{HighSierraJFont}
 ```
 
-とすれば，次のコマンドで macOS 10.13 High Sierra 搭載の全和文フォントが使用可能になります。
+とすれば，次のコマンドで macOS 10.13 High Sierra / macOS 10.14 Mojave 搭載の全和文フォントが使用可能になります。
 
 * `\HighSierraJFont{hiraginoSans}{w0}`：ヒラギノ角ゴシック W0
 * `\HighSierraJFont{hiraginoSans}{w1}`：ヒラギノ角ゴシック W1
